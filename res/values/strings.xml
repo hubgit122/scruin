@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Scruin</string>
+    <string name="toolet_en">通知栏滑动小助手</string>
+    <string name="red">红</string>
+    <string name="green">绿</string>
+    <string name="blue">蓝</string>
+    <string name="alpha">透</string>
+    <string name="ia_en">启用亮度调节</string>
+    <string name="adjust_en">颜色校正</string>
+    <string name="set">…</string>
+    <string name="reset">清空设置</string>
+    <string name="relatively">相对/绝对</string>
+</resources>
