@@ -72,7 +72,7 @@ public class DeamonService extends Service
                 {
                     Message msg = new Message();
                     msg.what = Scruin.TOAST;
-                    msg.obj = "åº”ç”¨å®‰è£…è¿‡ç¨‹ä¸­ä¼šæš‚åœæ˜¾ç¤ºæŠ¤ç›®é•œ";
+                    msg.obj = "Ó¦ÓÃ°²×°¹ı³ÌÖĞ»áÔİÍ£ÏÔÊ¾»¤Ä¿¾µ";
                     Scruin.handler.sendMessage(msg);
                     Scruin.handler.sendEmptyMessage(Scruin.REMOVE_FILTER);
                     filterHidenBecauseOfInstall = true;
@@ -90,7 +90,7 @@ public class DeamonService extends Service
                 {
                     Message msg = new Message();
                     msg.what = Scruin.TOAST;
-                    msg.obj = "é€šè¯è¿‡ç¨‹ä¸­ä¼šæš‚åœé€šçŸ¥æ æ‹–åŠ¨åŠŸèƒ½, é˜²æ­¢è€³æœµç¢°åˆ°";
+                    msg.obj = "Í¨»°¹ı³ÌÖĞ»áÔİÍ£Í¨ÖªÀ¸ÍÏ¶¯¹¦ÄÜ, ·ÀÖ¹¶ú¶äÅöµ½";
                     Scruin.handler.sendMessage(msg);
                     Scruin.handler.sendEmptyMessage(Scruin.REMOVE_TOOLET);
                     tooletHidenBecauseOfPhoneCall = true;

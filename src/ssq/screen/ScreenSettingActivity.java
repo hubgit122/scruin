@@ -18,11 +18,11 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class ScreenSettingActivity extends Activity
 {
-	private static final String	å–æ¶ˆ							= "å–æ¶ˆ";
-	private static final String	ç¡®å®š							= "ç¡®å®š";
-	private static final String	è¯·è¾“å…¥ä¸€ä¸ª0_255ä¹‹é—´çš„æ•´æ•°_å¦‚æœè¶…å‡ºèŒƒå›´_å°†æˆªå–	= "è¯·è¾“å…¥ä¸€ä¸ª0-255ä¹‹é—´çš„æ•´æ•°. \nå¦‚æœè¶…å‡ºèŒƒå›´, å°†æˆªå–. ";
-	private static final String	è®¾ç½®é¢œè‰²åˆ†é‡						= "è®¾ç½®é¢œè‰²åˆ†é‡";
-	private static final String	è¯·æ£€æŸ¥è¾“å…¥æ ¼å¼						= "è¯·æ£€æŸ¥è¾“å…¥æ ¼å¼";
+	private static final String	È¡Ïû							= "È¡Ïû";
+	private static final String	È·¶¨							= "È·¶¨";
+	private static final String	ÇëÊäÈëÒ»¸ö0_255Ö®¼äµÄÕûÊı_Èç¹û³¬³ö·¶Î§_½«½ØÈ¡	= "ÇëÊäÈëÒ»¸ö0-255Ö®¼äµÄÕûÊı. \nÈç¹û³¬³ö·¶Î§, ½«½ØÈ¡. ";
+	private static final String	ÉèÖÃÑÕÉ«·ÖÁ¿						= "ÉèÖÃÑÕÉ«·ÖÁ¿";
+	private static final String	Çë¼ì²éÊäÈë¸ñÊ½						= "Çë¼ì²éÊäÈë¸ñÊ½";
 	private CheckBox			filterEnBox, rgbEnBox, tooletEnBox, relativelyBox;
 	private SeekBar				rBar, gBar, bBar, aBar;
 	private Button				rButton, gButton, bButton, aButton, resetButton;
@@ -121,7 +121,7 @@ public class ScreenSettingActivity extends Activity
 																{
 																	final EditText editText = new EditText(ScreenSettingActivity.this);
 																	
-																	new AlertDialog.Builder(ScreenSettingActivity.this).setTitle(è®¾ç½®é¢œè‰²åˆ†é‡).setMessage(è¯·è¾“å…¥ä¸€ä¸ª0_255ä¹‹é—´çš„æ•´æ•°_å¦‚æœè¶…å‡ºèŒƒå›´_å°†æˆªå–).setIcon(android.R.drawable.ic_dialog_info).setView(editText).setPositiveButton(ç¡®å®š, new DialogInterface.OnClickListener()
+																	new AlertDialog.Builder(ScreenSettingActivity.this).setTitle(ÉèÖÃÑÕÉ«·ÖÁ¿).setMessage(ÇëÊäÈëÒ»¸ö0_255Ö®¼äµÄÕûÊı_Èç¹û³¬³ö·¶Î§_½«½ØÈ¡).setIcon(android.R.drawable.ic_dialog_info).setView(editText).setPositiveButton(È·¶¨, new DialogInterface.OnClickListener()
 																	{
 																		@Override
 																		public void onClick(DialogInterface dialog, int which)
@@ -151,12 +151,12 @@ public class ScreenSettingActivity extends Activity
 																			}
 																			catch (NumberFormatException e)
 																			{
-																				Scruin.showToast(è¯·æ£€æŸ¥è¾“å…¥æ ¼å¼);
+																				Scruin.showToast(Çë¼ì²éÊäÈë¸ñÊ½);
 																				return;
 																			}
 																			dialog.dismiss();
 																		}
-																	}).setNegativeButton(å–æ¶ˆ, new DialogInterface.OnClickListener()
+																	}).setNegativeButton(È¡Ïû, new DialogInterface.OnClickListener()
 																	{
 																		@Override
 																		public void onClick(DialogInterface dialog, int which)

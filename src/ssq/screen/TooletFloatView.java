@@ -15,11 +15,11 @@ import android.widget.ImageView;
 
 class TooletFloatView extends ImageView
 {
-    private static final String          åˆ›å»ºæ»‘åŠ¨å·¥å…·å¤±è´¥ = "åˆ›å»ºæ»‘åŠ¨å·¥å…·å¤±è´¥";
-    //	private static final String åˆ›å»ºæ»‘åŠ¨å·¥å…·æˆåŠŸ_è¯·é•¿æŒ‰é€šçŸ¥æ æµ‹è¯• = "åˆ›å»ºæ»‘åŠ¨å·¥å…·æˆåŠŸ, è¯·é•¿æŒ‰é€šçŸ¥æ æµ‹è¯•";
+    private static final String          ´´½¨»¬¶¯¹¤¾ßÊ§°Ü = "´´½¨»¬¶¯¹¤¾ßÊ§°Ü";
+    //	private static final String ´´½¨»¬¶¯¹¤¾ß³É¹¦_Çë³¤°´Í¨ÖªÀ¸²âÊÔ = "´´½¨»¬¶¯¹¤¾ß³É¹¦, Çë³¤°´Í¨ÖªÀ¸²âÊÔ";
     private boolean                      showing  = false;
     protected FilterFloatView            filterFloatView;
-    // æ­¤wmParamsä¸ºè·å–çš„å…¨å±€å˜é‡ï¼Œç”¨ä»¥ä¿å­˜æ‚¬æµ®çª—å£çš„å±æ€§
+    // ´ËwmParamsÎª»ñÈ¡µÄÈ«¾Ö±äÁ¿£¬ÓÃÒÔ±£´æĞü¸¡´°¿ÚµÄÊôĞÔ
     protected WindowManager.LayoutParams wmParams = new WindowManager.LayoutParams();
     private boolean                      longPressedDraging;
     
@@ -97,7 +97,7 @@ class TooletFloatView extends ImageView
                 break;
             case MotionEvent.ACTION_MOVE:
             {
-                // åˆ¤æ–­æ˜¯å¦åœ¨åŸåœ°é•¿æŒ‰
+                // ÅĞ¶ÏÊÇ·ñÔÚÔ­µØ³¤°´
                 if (!longPressedDraging && ((Math.abs(x - iconStartX) > 50) || (Math.abs(y - iconStartY) > 50)))
                 {
                     // Log.d("guesture", "movedOut: " + x + " : " + iconStartX +
@@ -228,8 +228,8 @@ class TooletFloatView extends ImageView
     
     //
     // /**
-    // * è·å¾—å½“å‰å±å¹•äº®åº¦çš„æ¨¡å¼ SCREEN_BRIGHTNESS_MODE_AUTOMATIC=1 ä¸ºè‡ªåŠ¨è°ƒèŠ‚å±å¹•äº®åº¦
-    // * SCREEN_BRIGHTNESS_MODE_MANUAL=0 ä¸ºæ‰‹åŠ¨è°ƒèŠ‚å±å¹•äº®åº¦
+    // * »ñµÃµ±Ç°ÆÁÄ»ÁÁ¶ÈµÄÄ£Ê½ SCREEN_BRIGHTNESS_MODE_AUTOMATIC=1 Îª×Ô¶¯µ÷½ÚÆÁÄ»ÁÁ¶È
+    // * SCREEN_BRIGHTNESS_MODE_MANUAL=0 ÎªÊÖ¶¯µ÷½ÚÆÁÄ»ÁÁ¶È
     // */
     // private int getScreenMode()
     // {
@@ -246,7 +246,7 @@ class TooletFloatView extends ImageView
     // }
     //
     // /**
-    // * è·å¾—å½“å‰å±å¹•äº®åº¦å€¼ 0--255
+    // * »ñµÃµ±Ç°ÆÁÄ»ÁÁ¶ÈÖµ 0--255
     // */
     // private int getScreenBrightness()
     // {
@@ -263,7 +263,7 @@ class TooletFloatView extends ImageView
     // }
     
     /**
-     * è®¾ç½®å½“å‰å±å¹•äº®åº¦çš„æ¨¡å¼ SCREEN_BRIGHTNESS_MODE_AUTOMATIC=1 ä¸ºè‡ªåŠ¨è°ƒèŠ‚å±å¹•äº®åº¦ SCREEN_BRIGHTNESS_MODE_MANUAL=0 ä¸ºæ‰‹åŠ¨è°ƒèŠ‚å±å¹•äº®åº¦
+     * ÉèÖÃµ±Ç°ÆÁÄ»ÁÁ¶ÈµÄÄ£Ê½ SCREEN_BRIGHTNESS_MODE_AUTOMATIC=1 Îª×Ô¶¯µ÷½ÚÆÁÄ»ÁÁ¶È SCREEN_BRIGHTNESS_MODE_MANUAL=0 ÎªÊÖ¶¯µ÷½ÚÆÁÄ»ÁÁ¶È
      */
     private void setScreenMode(int paramInt)
     {
@@ -277,7 +277,7 @@ class TooletFloatView extends ImageView
     }
     
     /**
-     * è®¾ç½®å…¨å±€å±å¹•äº®åº¦å€¼ 0-255
+     * ÉèÖÃÈ«¾ÖÆÁÄ»ÁÁ¶ÈÖµ 0-255
      */
     private boolean setScreenBrightness(int paramInt)
     {
@@ -334,7 +334,7 @@ class TooletFloatView extends ImageView
             {
                 wm.addView(this, this.wmParams);
                 showing = true;
-                //				Scruin.showToast(åˆ›å»ºæ»‘åŠ¨å·¥å…·æˆåŠŸ_è¯·é•¿æŒ‰é€šçŸ¥æ æµ‹è¯•);
+                //				Scruin.showToast(´´½¨»¬¶¯¹¤¾ß³É¹¦_Çë³¤°´Í¨ÖªÀ¸²âÊÔ);
             }
             catch (Exception e)
             {
@@ -344,7 +344,7 @@ class TooletFloatView extends ImageView
                 }
                 catch (Exception e2)
                 {
-                    Scruin.showToast(åˆ›å»ºæ»‘åŠ¨å·¥å…·å¤±è´¥);
+                    Scruin.showToast(´´½¨»¬¶¯¹¤¾ßÊ§°Ü);
                 }
                 showing = false;
             }
