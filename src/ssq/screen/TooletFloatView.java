@@ -80,7 +80,7 @@ class TooletFloatView extends ImageView
                 }
                 else
                 {
-                    // Log.d("guesture", "tapTime: " + tapTime + ", now: " +
+                    // Log.d("Gesture", "tapTime: " + tapTime + ", now: " +
                     // Calendar.getInstance().getTimeInMillis() + ", x: " + x +
                     // ", y: " + y + ", iconStartX: "+ iconStartX + ", iconStartY: "
                     // + iconStartY);
@@ -100,7 +100,7 @@ class TooletFloatView extends ImageView
                 // 判断是否在原地长按
                 if (!longPressedDraging && ((Math.abs(x - iconStartX) > 50) || (Math.abs(y - iconStartY) > 50)))
                 {
-                    // Log.d("guesture", "movedOut: " + x + " : " + iconStartX +
+                    // Log.d("Gesture", "movedOut: " + x + " : " + iconStartX +
                     // " ; " + y + " : " + iconStartY);
                     movedOut = true;
                     if (y > wmParams.height || x > wmParams.width)
@@ -115,7 +115,7 @@ class TooletFloatView extends ImageView
                 }
                 else
                 {
-                    // Log.d("guesture", "movedOut: " + movedOut +
+                    // Log.d("Gesture", "movedOut: " + movedOut +
                     // ", longPressedDraging: "+ longPressedDraging +
                     // ", now - tap: " + (Calendar.getInstance().getTimeInMillis() -
                     // tapTime));
@@ -148,7 +148,7 @@ class TooletFloatView extends ImageView
     
     private void onMovedOut(float x, float y)
     {
-        // Log.d("guesture", "onMovedOut");
+        // Log.d("Gesture", "onMovedOut");
         Scruin.OpenNotify();
         remove();
         final Handler handler = new Handler();
@@ -165,27 +165,37 @@ class TooletFloatView extends ImageView
     
     private void onDrag(float x, float y)
     {
-        // Log.d("guesture", "onDrag");
+        // Log.d("Gesture", "onDrag");
     }
     
     private void onSingleTappedLongPressDrag(float x, float y)
     {
         int w = Scruin.getApp().screenw;
-        // Log.d("guesture", "onSingleTappedLongPressDrag");
-        filterFloatView.setAlpha(Math.min(Math.max((int) (255 * (w / 2 * 3 - 2 * x) / w), 0), 235));
+        // Log.d("Gesture", "onSingleTappedLongPressDrag");
+        int alpaha = Math.min(Math.max((int) (255 * (w / 2 * 3 - 2 * x) / w), 0), 235);
+        
+        if (alpaha == 0)
+        {
+            filterFloatView.remove();
+        }
+        else
+        {
+            filterFloatView.show();
+            filterFloatView.setAlpha(alpaha);
+        }
     }
     
     private void onDoubleTappedLongPressDrag(float x, float y)
     {
         setScreenMode(0);
         int w = Scruin.getApp().screenw;
-        // Log.d("guesture", "onDoubleTappedLongPressDrag");
+        // Log.d("Gesture", "onDoubleTappedLongPressDrag");
         setScreenBrightness(Math.min(Math.max((int) (255 * (2 * x - w / 2) / w), 20), 255));
     }
     
     private void onUp(float x, float y)
     {
-        // Log.d("guesture", "onUp");
+        // Log.d("Gesture", "onUp");
         if (longPressedDraging && doubleTapped)
         {
             if (Math.abs(x - longPressStartX) < 20 && Math.abs(y - longPressStartY) < 20)
@@ -197,24 +207,24 @@ class TooletFloatView extends ImageView
     
     private void onSingleTap(float x, float y)
     {
-        // Log.d("guesture", "onSingleTap");
+        // Log.d("Gesture", "onSingleTap");
     }
     
     private void onDoubleTap(float x, float y, float x2, float y2)
     {
-        // Log.d("guesture", "onDoubleTap");
+        // Log.d("Gesture", "onDoubleTap");
     }
     
     private void onLongPressedDrag(float x, float y)
     {
-        // Log.d("guesture", "onLongPressedDrag");
+        // Log.d("Gesture", "onLongPressedDrag");
     }
     
     float longPressStartX, longPressStartY;
     
     private void onLongPressedConfirm(float x, float y)
     {
-        // Log.d("guesture", "onLongPressedConfirm");
+        // Log.d("Gesture", "onLongPressedConfirm");
         Scruin.handler.sendEmptyMessage(Scruin.VIBRATE_LITTLE);
         longPressStartX = x;
         longPressStartY = y;
@@ -281,7 +291,7 @@ class TooletFloatView extends ImageView
      */
     private boolean setScreenBrightness(int paramInt)
     {
-        // Log.d("guesture", "setScreenBrightness: "+paramInt);
+        // Log.d("Gesture", "setScreenBrightness: "+paramInt);
         try
         {
             Settings.System.putInt(Scruin.getApp().getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, paramInt);
