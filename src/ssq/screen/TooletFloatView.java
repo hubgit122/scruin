@@ -174,6 +174,8 @@ class TooletFloatView extends ImageView
         // Log.d("Gesture", "onSingleTappedLongPressDrag");
         int alpaha = Math.min(Math.max((int) (255 * (w / 2 * 3 - 2 * x) / w), 0), 235);
         
+        filterFloatView.setAlpha(alpaha);
+        
         if (alpaha == 0)
         {
             filterFloatView.remove();
@@ -181,7 +183,6 @@ class TooletFloatView extends ImageView
         else
         {
             filterFloatView.show();
-            filterFloatView.setAlpha(alpaha);
         }
     }
     
