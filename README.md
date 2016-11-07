@@ -15,4 +15,4 @@ Moreover, you can use this app to adjust your screen color, just change the colo
 To change the transparency without bothering to open the configure Activity, just enable the option "Assistant on notification bar", and you can adjust the transparency of the layer by long pressing on the notification bar, and drag your finger along the notification bar. 
 
 
-<img style="display: block; margin: auto; width: 50%" src="https://github.com/ssqstone/scruin/blob/master/doc/ui.jpg?raw=true"><p  style="text-align: center;" > <a href="https://github.com/ssqstone/scruin/blob/master/doc/ui.jpg?raw=true"> UI </a> </p><br/><br/>
+<img style="display: block; margin: auto; width: 30%" src="https://github.com/ssqstone/scruin/blob/master/doc/ui.jpg?raw=true"><p  style="text-align: center;" > <a href="https://github.com/ssqstone/scruin/blob/master/doc/ui.jpg?raw=true"> UI </a> </p><br/><br/>
